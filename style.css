@@ -409,7 +409,7 @@ main .recent-orders a{
 /* ''''''''''right.............. */
 .right{
     margin-top: 1.4rem;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
 }
 
 .right .top{
@@ -461,7 +461,7 @@ main .recent-orders a{
     margin-bottom: 0.8rem;
 }
 
-.recent-updates .updates{
+.right .recent-updates .updates{
      background: var(--color-white);
      padding: var(--card-padding);
      border-radius: var(--card-border-radius);
@@ -483,13 +483,13 @@ main .recent-orders a{
 /* ..........sales analytics......... */
 
  right .sales-analytics{
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .right .sales-analytics h2{
     margin-bottom: 0.8rem;
 }
-
+ 
  .right .sales-analytics .item{
     background: var(--color-white);
     display: flex;
@@ -558,10 +558,10 @@ main .recent-orders a{
 @media screen and (max-width: 1200px){
     .container{
        width:   94%;
-       /* my new code of correction */
-       display: inline-flex;
+
+       /* display: inline-flex; */
        grid-template-columns: 7rem auto 23rem;
-       gap: 8rem;
+       /* gap: 8rem; */
     }
     aside .logo h2{
         display: none;
@@ -573,6 +573,10 @@ main .recent-orders a{
     }
     aside .sidebar a{
         width: 5.6rem;
+        /* margin-top: 1.8rem; */
+    }
+    aside .sidebar a:lastchild{
+        position: relative;
         margin-top: 1.8rem;
     }
     main .insights{
@@ -584,17 +588,17 @@ main .recent-orders a{
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        /* margin: 2rem 0 0 8.8rem; */
-        margin: 40rem 0 0 7.8rem;
+        margin: 2rem 0 0 8.8rem;
     }
     main .recent-orders table{
         width: 83vw;
     }
+    main table thead tr th:last-child,
     main table thead tr th:first-child{
         display: none;
     }
     main table tbody tr td:last-child,
-    main table tbody tr td:last-child{
+    main table tbody tr td:first-child{
         display: none;
     }
 }
@@ -602,14 +606,15 @@ main .recent-orders a{
 @media screen and (max-width: 768px){
     .container{
         width: 100%;
-        grid-template-columns: 1fr;
-        display: block;
+        /* grid-template-columns: 1fr;
+        display: block; */
     }
     aside{ 
         position: fixed;
         left: -100%;
         background: var(--color-white);
         width: 18rem;
+        z-index: 3;
         box-shadow: 1rem 3rem 4rem var(--color-white);
         height: 100vh;
         padding-right: var(--card-padding);
