@@ -367,16 +367,16 @@ main .insights small{
 
 /* ...................recent orders........ */
 main .recent-orders{
-    margin-top: 0.1rem;
+    margin-top: 2rem;
 }
 
 main .recent-orders h2{
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.8rem;
 }
 
-main  table{
+main .recent-orders table{
     background: var(--color-white);
-    width: 265%;
+    width: 100%;
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
     text-align: center;
@@ -409,7 +409,6 @@ main .recent-orders a{
 /* ''''''''''right.............. */
 .right{
     margin-top: 1.4rem;
-    /* margin-right: 2rem; */
 }
 
 .right .top{
@@ -448,7 +447,7 @@ main .recent-orders a{
 }
 .right .top .profile{
     display: flex;
-    grid-column-gap: 2rem;
+    gap: 2rem;
     text-align: right;
 }
 
@@ -475,7 +474,7 @@ main .recent-orders a{
 
 .right .recent-updates .updates .update{
     display: flex;
-    grid-auto-columns: 2.6rem;
+    grid-template-columns: 2.6rem;
     gap: 1rem;
     margin-bottom: 1rem;
 }
@@ -483,7 +482,7 @@ main .recent-orders a{
 /* ..........sales analytics......... */
 
  right .sales-analytics{
-    margin-top: 2rem;
+    margin-top: 2 rem;
 }
 
 .right .sales-analytics h2{
@@ -558,28 +557,31 @@ main .recent-orders a{
 @media screen and (max-width: 1200px){
     .container{
        width:   94%;
-
-       /* display: inline-flex; */
        grid-template-columns: 7rem auto 23rem;
-       /* gap: 8rem; */
     }
     aside .logo h2{
         display: none;
     }
     aside .sidebar h3{
-        display: ;
-        gap:4rem; 
-        
+        display: none; 
     }
     aside .sidebar a{
         width: 5.6rem;
-        /* margin-top: 1.8rem; */
     }
     aside .sidebar a:lastchild{
         position: relative;
         margin-top: 1.8rem;
     }
+    main .insights .sales,
+    main .insights .income,
+    main .insights .expenses
+    {
+        width: 100%;
+        align-items: center;
+        justify-items: center;
+    }
     main .insights{
+        width: 100%;
         grid-template-columns: 1fr;
         gap: 0;
     }
@@ -597,7 +599,7 @@ main .recent-orders a{
     main table thead tr th:first-child{
         display: none;
     }
-    main table tbody tr td:last-child,
+    main table tbody tr td:last-child, 
     main table tbody tr td:first-child{
         display: none;
     }
@@ -606,8 +608,8 @@ main .recent-orders a{
 @media screen and (max-width: 768px){
     .container{
         width: 100%;
-        /* grid-template-columns: 1fr;
-        display: block; */
+        grid-template-columns: 1fr;
+        /* display: block;  */
     }
     aside{ 
         position: fixed;
@@ -640,13 +642,15 @@ main .recent-orders a{
     aside .sidebar a{
         width: 100%;
         height: 3.4rem;
+        
     }
     aside .sidebar a:last-child{
         position: absolute;
         bottom: 5rem;
     }
     aside .close{
-        margin-top: 8rem;
+      display: inline-block;
+      cursor: pointer;
     }
     main{
         margin-top: 8rem;
@@ -664,6 +668,7 @@ main .recent-orders a{
     main .recent-orders{
         position: relative;
         margin: 3rem 0 0 0;
+        width: 100%;
     }
     main .recent-orders table{
         width: 100%;
