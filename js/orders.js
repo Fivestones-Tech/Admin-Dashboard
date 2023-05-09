@@ -1,7 +1,7 @@
 const Orders = [
 {
     productName: 'foladable Mini Drone',
-    productNumber: '85531',
+    productNumber: '85531', 
     paymentStatus:'Due',
     shipping: 'Pending'
 },
@@ -13,7 +13,7 @@ const Orders = [
 },
 {
     productName: 'Ruko F11 Pro Drone',
-    productNumber: '58431',
+    productNumber: '58431', 
     paymentStatus:'Due',
     shipping: 'Pending'
 },
